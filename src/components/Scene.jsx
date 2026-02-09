@@ -1,0 +1,51 @@
+import React, { useMemo } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Environment, Grid } from '@react-three/drei';
+import DataSphere from './DataSphere';
+import { generateData } from '../data/generateData';
+
+const Scene = () => {
+    const dataPoints = useMemo(() => generateData(50), []);
+
+    return (
+        <div style={{ width: '100vw', height: '100vh', background: '#111' }}>
+            <Canvas camera={{ position: [0, 5, 20], fov: 60 }}>
+                {/* Environment */}
+                <color attach="background" args={['#0a0a0a']} />
+                <fog attach="fog" args={['#0a0a0a', 10, 40]} />
+
+                {/* Lights */}
+                <ambientLight intensity={0.5} />
+                <pointLight position={[10, 10, 10]} intensity={1} color="#44ecff" />
+                <pointLight position={[-10, 10, -10]} intensity={1} color="#d144ff" />
+
+                {/* Floor Grid */}
+                <Grid
+                    position={[0, 0, 0]}
+                    args={[40, 40]}
+                    cellColor="#333"
+                    sectionColor="#555"
+                    fadeDistance={20}
+                />
+
+                {/* Data Spheres */}
+                {dataPoints.map((data) => (
+                    <DataSphere key={data.id} data={data} />
+                ))}
+
+                {/* Controls */}
+                <OrbitControls
+                    enablePan={false}
+                    maxPolarAngle={Math.PI / 2 - 0.1} // Prevent going below floor
+                    minDistance={5}
+                    maxDistance={30}
+                />
+
+                {/* Post Processing or Environment if needed */}
+                {/* <Environment preset="city" /> */}
+            </Canvas>
+        </div>
+    );
+};
+
+export default Scene;
