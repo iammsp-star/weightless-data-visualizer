@@ -1,552 +1,1602 @@
 [
   {
-    "id": 0,
-    "label": "Asset 1",
-    "value": 0.17020427839037844,
-    "raw_value": 253.18,
-    "position": [
-      -2.8045097371273497,
-      0,
-      -10.576944386322587
-    ]
-  },
-  {
     "id": 1,
-    "label": "Asset 2",
-    "value": 0.4995222986608365,
-    "raw_value": 549.57,
+    "label": "Athlete_1",
+    "value": 0.21876421957307024,
+    "raw_value": 29.7,
+    "category": "Elite",
+    "stats": {
+      "pullups": 43,
+      "muscleups": 6
+    },
     "position": [
-      -1.9013105447942946,
+      27.0,
       0,
-      14.326446031048281
+      -6.0
     ]
   },
   {
     "id": 2,
-    "label": "Asset 3",
-    "value": 0.11113563625076128,
-    "raw_value": 200.02,
+    "label": "Athlete_2",
+    "value": 0.5581020020173412,
+    "raw_value": 60.2,
+    "category": "Elite",
+    "stats": {
+      "pullups": 33,
+      "muscleups": 6
+    },
     "position": [
-      3.798836391433249,
+      12.0,
       0,
-      -0.15400624308247401
+      -6.0
     ]
   },
   {
     "id": 3,
-    "label": "Asset 4",
-    "value": 0.2756128102913216,
-    "raw_value": 348.05,
+    "label": "Athlete_3",
+    "value": 0.4038361710580408,
+    "raw_value": 46.3,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 19,
+      "muscleups": 13
+    },
     "position": [
-      1.8501787711975881,
+      -9.0,
       0,
-      18.49707387572709
+      22.0
     ]
   },
   {
     "id": 4,
-    "label": "Asset 5",
-    "value": 0.5804885471650048,
-    "raw_value": 622.44,
+    "label": "Athlete_4",
+    "value": 0.06489224710898157,
+    "raw_value": 15.8,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 12,
+      "muscleups": 7
+    },
     "position": [
-      1.3080708961933762,
+      -19.5,
       0,
-      -16.909079821386946
+      -2.0
     ]
   },
   {
     "id": 5,
-    "label": "Asset 6",
-    "value": 0.11846864122434145,
-    "raw_value": 206.62,
+    "label": "Athlete_5",
+    "value": 0.2539154139343447,
+    "raw_value": 32.9,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 25,
+      "muscleups": 4
+    },
     "position": [
-      -15.479055616511772,
+      0.0,
       0,
-      13.90621541268879
+      -14.0
     ]
   },
   {
     "id": 6,
-    "label": "Asset 7",
-    "value": 0.3394081194512619,
-    "raw_value": 405.47,
+    "label": "Athlete_6",
+    "value": 0.24687606283860125,
+    "raw_value": 32.2,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 43,
+      "muscleups": 2
+    },
     "position": [
-      -0.44606173704284213,
+      27.0,
       0,
-      -10.359542088894633
+      -22.0
     ]
   },
   {
     "id": 7,
-    "label": "Asset 8",
-    "value": 0.7531556286007496,
-    "raw_value": 777.84,
+    "label": "Athlete_7",
+    "value": 0.6963042728397884,
+    "raw_value": 72.7,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 23,
+      "muscleups": 11
+    },
     "position": [
-      -15.387384474337109,
+      -3.0,
       0,
-      -13.030628333225573
+      14.0
     ]
   },
   {
     "id": 8,
-    "label": "Asset 9",
-    "value": 0.3305697585723365,
-    "raw_value": 397.51,
+    "label": "Athlete_8",
+    "value": 0.7122705899244419,
+    "raw_value": 74.1,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 27,
+      "muscleups": 7
+    },
     "position": [
-      10.269255371817554,
+      3.0,
       0,
-      11.982830742024294
+      -2.0
     ]
   },
   {
     "id": 9,
-    "label": "Asset 10",
-    "value": 0.23105260369775946,
-    "raw_value": 307.95,
+    "label": "Athlete_9",
+    "value": 0.1480869299533999,
+    "raw_value": 23.3,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 15,
+      "muscleups": 5
+    },
     "position": [
-      -12.930753937542434,
+      -15.0,
       0,
-      4.239362455280258
+      -10.0
     ]
   },
   {
     "id": 10,
-    "label": "Asset 11",
-    "value": 0.803388310611554,
-    "raw_value": 823.05,
+    "label": "Athlete_10",
+    "value": 0.9977404850489417,
+    "raw_value": 99.8,
+    "category": "Elite",
+    "stats": {
+      "pullups": 15,
+      "muscleups": 10
+    },
     "position": [
-      -0.7482276078647976,
+      -15.0,
       0,
-      18.14607502886282
+      10.0
     ]
   },
   {
     "id": 11,
-    "label": "Asset 12",
-    "value": 0.9441834514808629,
-    "raw_value": 949.77,
+    "label": "Athlete_11",
+    "value": 0.26678101427528494,
+    "raw_value": 34.0,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 28,
+      "muscleups": 2
+    },
     "position": [
-      1.9577113317887251,
+      4.5,
       0,
-      -11.866411553930604
+      -22.0
     ]
   },
   {
     "id": 12,
-    "label": "Asset 13",
-    "value": 0.19361594495675838,
-    "raw_value": 274.25,
+    "label": "Athlete_12",
+    "value": 0.9766149558326529,
+    "raw_value": 97.9,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 40,
+      "muscleups": 0
+    },
     "position": [
-      -17.657313931964865,
+      22.5,
       0,
-      -17.71422407832395
+      -30.0
     ]
   },
   {
     "id": 13,
-    "label": "Asset 14",
-    "value": 0.24110580552493907,
-    "raw_value": 317.0,
+    "label": "Athlete_13",
+    "value": 0.4110370133182313,
+    "raw_value": 47.0,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 44,
+      "muscleups": 2
+    },
     "position": [
-      15.133299854016684,
+      28.5,
       0,
-      12.610561382800661
+      -22.0
     ]
   },
   {
     "id": 14,
-    "label": "Asset 15",
-    "value": 0.1051525160900161,
-    "raw_value": 194.64,
+    "label": "Athlete_14",
+    "value": 0.03305073290054838,
+    "raw_value": 13.0,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 28,
+      "muscleups": 4
+    },
     "position": [
-      9.920333466748176,
+      4.5,
       0,
-      9.769119815422522
+      -14.0
     ]
   },
   {
     "id": 15,
-    "label": "Asset 16",
-    "value": 0.5409187457962399,
-    "raw_value": 586.83,
+    "label": "Athlete_15",
+    "value": 0.345071248026683,
+    "raw_value": 41.1,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 7,
+      "muscleups": 14
+    },
     "position": [
-      -19.24589289938623,
+      -27.0,
       0,
-      2.6636635102274253
+      26.0
     ]
   },
   {
     "id": 16,
-    "label": "Asset 17",
-    "value": 0.03251119483173625,
-    "raw_value": 129.26,
+    "label": "Athlete_16",
+    "value": 0.6343513447013638,
+    "raw_value": 67.1,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 26,
+      "muscleups": 13
+    },
     "position": [
-      17.944446022180305,
+      1.5,
       0,
-      1.1796328598679162
+      22.0
     ]
   },
   {
     "id": 17,
-    "label": "Asset 18",
-    "value": 0.36908560476515306,
-    "raw_value": 432.18,
+    "label": "Athlete_17",
+    "value": 0.6807054515547668,
+    "raw_value": 71.3,
+    "category": "Elite",
+    "stats": {
+      "pullups": 6,
+      "muscleups": 2
+    },
     "position": [
-      17.966753786948296,
+      -28.5,
       0,
-      -13.942639953995467
+      -22.0
     ]
   },
   {
     "id": 18,
-    "label": "Asset 19",
-    "value": 0.8460221251203089,
-    "raw_value": 861.42,
+    "label": "Athlete_18",
+    "value": 0.5309345833171364,
+    "raw_value": 57.8,
+    "category": "Elite",
+    "stats": {
+      "pullups": 28,
+      "muscleups": 0
+    },
     "position": [
-      6.895421633976717,
+      4.5,
       0,
-      -12.816630297726856
+      -30.0
     ]
   },
   {
     "id": 19,
-    "label": "Asset 20",
-    "value": 0.46634272089185475,
-    "raw_value": 519.71,
+    "label": "Athlete_19",
+    "value": 0.4477831645730917,
+    "raw_value": 50.3,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 34,
+      "muscleups": 4
+    },
     "position": [
-      -11.335834940399616,
+      13.5,
       0,
-      -6.34368315234656
+      -14.0
     ]
   },
   {
     "id": 20,
-    "label": "Asset 21",
-    "value": 0.23050426738425522,
-    "raw_value": 307.45,
+    "label": "Athlete_20",
+    "value": 0.552893089071328,
+    "raw_value": 59.8,
+    "category": "Elite",
+    "stats": {
+      "pullups": 42,
+      "muscleups": 9
+    },
     "position": [
-      -14.175117185190441,
+      25.5,
       0,
-      19.582245830028363
+      6.0
     ]
   },
   {
     "id": 21,
-    "label": "Asset 22",
-    "value": 0.6621630963288803,
-    "raw_value": 695.95,
+    "label": "Athlete_21",
+    "value": 0.5926967238793935,
+    "raw_value": 63.3,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 6,
+      "muscleups": 6
+    },
     "position": [
-      14.656727760702225,
+      -28.5,
       0,
-      -4.505670318092281
+      -6.0
     ]
   },
   {
     "id": 22,
-    "label": "Asset 23",
-    "value": 0.8615492769520762,
-    "raw_value": 875.39,
+    "label": "Athlete_22",
+    "value": 0.08085332633271523,
+    "raw_value": 17.3,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 25,
+      "muscleups": 14
+    },
     "position": [
-      -9.409033535037086,
+      0.0,
       0,
-      -5.121206597764472
+      26.0
     ]
   },
   {
     "id": 23,
-    "label": "Asset 24",
-    "value": 0.640748394190206,
-    "raw_value": 676.67,
+    "label": "Athlete_23",
+    "value": 0.3696544560614044,
+    "raw_value": 43.3,
+    "category": "Elite",
+    "stats": {
+      "pullups": 37,
+      "muscleups": 13
+    },
     "position": [
-      4.575955832695433,
+      18.0,
       0,
-      -7.845867496504888
+      22.0
     ]
   },
   {
     "id": 24,
-    "label": "Asset 25",
-    "value": 0.532780366219164,
-    "raw_value": 579.5,
+    "label": "Athlete_24",
+    "value": 0.24215993827742588,
+    "raw_value": 31.8,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 16,
+      "muscleups": 6
+    },
     "position": [
-      15.042582545348688,
+      -13.5,
       0,
-      -6.255705373520457
+      -6.0
     ]
   },
   {
     "id": 25,
-    "label": "Asset 26",
-    "value": 0.2051507342267186,
-    "raw_value": 284.64,
+    "label": "Athlete_25",
+    "value": 0.8031397563798959,
+    "raw_value": 82.3,
+    "category": "Elite",
+    "stats": {
+      "pullups": 26,
+      "muscleups": 10
+    },
     "position": [
-      14.643866452977473,
+      1.5,
       0,
-      -8.029380956870288
+      10.0
     ]
   },
   {
     "id": 26,
-    "label": "Asset 27",
-    "value": 0.5648766603628417,
-    "raw_value": 608.39,
+    "label": "Athlete_26",
+    "value": 0.4703006344460384,
+    "raw_value": 52.3,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 29,
+      "muscleups": 8
+    },
     "position": [
-      -1.0260593638314752,
+      6.0,
       0,
-      -19.22227876549503
+      2.0
     ]
   },
   {
     "id": 27,
-    "label": "Asset 28",
-    "value": 0.03646766695731849,
-    "raw_value": 132.82,
+    "label": "Athlete_27",
+    "value": 0.983423140894843,
+    "raw_value": 98.5,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 31,
+      "muscleups": 14
+    },
     "position": [
-      5.231226054704372,
+      9.0,
       0,
-      -19.65790717582518
+      26.0
     ]
   },
   {
     "id": 28,
-    "label": "Asset 29",
-    "value": 0.8782391967391252,
-    "raw_value": 890.42,
+    "label": "Athlete_28",
+    "value": 0.39882444244455306,
+    "raw_value": 45.9,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 32,
+      "muscleups": 14
+    },
     "position": [
-      -2.166282689382233,
+      10.5,
       0,
-      -8.772852578077526
+      26.0
     ]
   },
   {
     "id": 29,
-    "label": "Asset 30",
-    "value": 0.02679559272782506,
-    "raw_value": 124.12,
+    "label": "Athlete_29",
+    "value": 0.8164318732193839,
+    "raw_value": 83.5,
+    "category": "Elite",
+    "stats": {
+      "pullups": 20,
+      "muscleups": 9
+    },
     "position": [
-      -16.11949455979182,
+      -7.5,
       0,
-      17.812107128565838
+      6.0
     ]
   },
   {
     "id": 30,
-    "label": "Asset 31",
-    "value": 0.3585627310741232,
-    "raw_value": 422.71,
+    "label": "Athlete_30",
+    "value": 0.7983451249845511,
+    "raw_value": 81.9,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 19,
+      "muscleups": 9
+    },
     "position": [
-      1.6751564677198427,
+      -9.0,
       0,
-      -2.8137693016913135
+      6.0
     ]
   },
   {
     "id": 31,
-    "label": "Asset 32",
-    "value": 0.8737485088545054,
-    "raw_value": 886.37,
+    "label": "Athlete_31",
+    "value": 0.15071754396542947,
+    "raw_value": 23.6,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 7,
+      "muscleups": 11
+    },
     "position": [
-      17.171533666091307,
+      -27.0,
       0,
-      -2.0172223270261336
+      14.0
     ]
   },
   {
     "id": 32,
-    "label": "Asset 33",
-    "value": 0.7375084542285871,
-    "raw_value": 763.76,
+    "label": "Athlete_32",
+    "value": 0.5081987767407187,
+    "raw_value": 55.7,
+    "category": "Elite",
+    "stats": {
+      "pullups": 41,
+      "muscleups": 12
+    },
     "position": [
-      -1.528054948619646,
+      24.0,
       0,
-      19.212543219599603
+      18.0
     ]
   },
   {
     "id": 33,
-    "label": "Asset 34",
-    "value": 0.6960331358856247,
-    "raw_value": 726.43,
+    "label": "Athlete_33",
+    "value": 0.6958128067908819,
+    "raw_value": 72.6,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 11,
+      "muscleups": 2
+    },
     "position": [
-      -12.692231463400901,
+      -21.0,
       0,
-      5.491288664105647
+      -22.0
     ]
   },
   {
     "id": 34,
-    "label": "Asset 35",
-    "value": 0.4441997764297133,
-    "raw_value": 499.78,
+    "label": "Athlete_34",
+    "value": 0.8583588048137198,
+    "raw_value": 87.3,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 25,
+      "muscleups": 14
+    },
     "position": [
-      17.87961886413923,
+      0.0,
       0,
-      18.86338886418099
+      26.0
     ]
   },
   {
     "id": 35,
-    "label": "Asset 36",
-    "value": 0.050423422496275835,
-    "raw_value": 145.38,
+    "label": "Athlete_35",
+    "value": 0.3259589052018847,
+    "raw_value": 39.3,
+    "category": "Elite",
+    "stats": {
+      "pullups": 13,
+      "muscleups": 6
+    },
     "position": [
-      -16.760305696927112,
+      -18.0,
       0,
-      7.31528950740894
+      -6.0
     ]
   },
   {
     "id": 36,
-    "label": "Asset 37",
-    "value": 0.30073523194969365,
-    "raw_value": 370.66,
+    "label": "Athlete_36",
+    "value": 0.2202410475655483,
+    "raw_value": 29.8,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 43,
+      "muscleups": 0
+    },
     "position": [
-      18.246053959013636,
+      27.0,
       0,
-      10.696654939915167
+      -30.0
     ]
   },
   {
     "id": 37,
-    "label": "Asset 38",
-    "value": 0.6950197281824901,
-    "raw_value": 725.52,
+    "label": "Athlete_37",
+    "value": 0.7111495324380178,
+    "raw_value": 74.0,
+    "category": "Elite",
+    "stats": {
+      "pullups": 22,
+      "muscleups": 3
+    },
     "position": [
-      2.341489685617373,
+      -4.5,
       0,
-      4.712084441112689
+      -18.0
     ]
   },
   {
     "id": 38,
-    "label": "Asset 39",
-    "value": 0.27174580991353775,
-    "raw_value": 344.57,
+    "label": "Athlete_38",
+    "value": 0.8095010461397153,
+    "raw_value": 82.9,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 8,
+      "muscleups": 12
+    },
     "position": [
-      -7.26645722731301,
+      -25.5,
       0,
-      12.240124968593848
+      18.0
     ]
   },
   {
     "id": 39,
-    "label": "Asset 40",
-    "value": 0.99071819130228,
-    "raw_value": 991.65,
+    "label": "Athlete_39",
+    "value": 0.34866598729172943,
+    "raw_value": 41.4,
+    "category": "Elite",
+    "stats": {
+      "pullups": 29,
+      "muscleups": 3
+    },
     "position": [
-      4.470425862116896,
+      6.0,
       0,
-      13.012202022117819
+      -18.0
     ]
   },
   {
     "id": 40,
-    "label": "Asset 41",
-    "value": 0.6574822967258223,
-    "raw_value": 691.73,
+    "label": "Athlete_40",
+    "value": 0.09617655109142077,
+    "raw_value": 18.7,
+    "category": "Elite",
+    "stats": {
+      "pullups": 18,
+      "muscleups": 13
+    },
     "position": [
-      -11.621262922019117,
+      -10.5,
       0,
-      5.7546837277628216
+      22.0
     ]
   },
   {
     "id": 41,
-    "label": "Asset 42",
-    "value": 0.3897496001195865,
-    "raw_value": 450.77,
+    "label": "Athlete_41",
+    "value": 0.940523264489604,
+    "raw_value": 94.6,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 13,
+      "muscleups": 4
+    },
     "position": [
-      -2.7187898609211913,
+      -18.0,
       0,
-      -7.154247601171728
+      -14.0
     ]
   },
   {
     "id": 42,
-    "label": "Asset 43",
-    "value": 0.6625268350776811,
-    "raw_value": 696.27,
+    "label": "Athlete_42",
+    "value": 0.3975720210875223,
+    "raw_value": 45.8,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 30,
+      "muscleups": 6
+    },
     "position": [
-      9.29155593307363,
+      7.5,
       0,
-      -14.240015105827805
+      -6.0
     ]
   },
   {
     "id": 43,
-    "label": "Asset 44",
-    "value": 0.8231329404535382,
-    "raw_value": 840.82,
+    "label": "Athlete_43",
+    "value": 0.5177513505274801,
+    "raw_value": 56.6,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 6,
+      "muscleups": 6
+    },
     "position": [
-      -17.469742551540573,
+      -28.5,
       0,
-      7.060380209206936
+      -6.0
     ]
   },
   {
     "id": 44,
-    "label": "Asset 45",
-    "value": 0.7858705333590711,
-    "raw_value": 807.28,
+    "label": "Athlete_44",
+    "value": 0.837710105907328,
+    "raw_value": 85.4,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 24,
+      "muscleups": 12
+    },
     "position": [
-      4.846137682684226,
+      -1.5,
       0,
-      7.188246345305749
+      18.0
     ]
   },
   {
     "id": 45,
-    "label": "Asset 46",
-    "value": 0.8709054405420487,
-    "raw_value": 883.81,
+    "label": "Athlete_45",
+    "value": 0.6756901170392808,
+    "raw_value": 70.8,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 32,
+      "muscleups": 14
+    },
     "position": [
-      -4.608174665103788,
+      10.5,
       0,
-      -2.4939694536208634
+      26.0
     ]
   },
   {
     "id": 46,
-    "label": "Asset 47",
-    "value": 0.19585635566906692,
-    "raw_value": 276.27,
+    "label": "Athlete_46",
+    "value": 0.735216119240772,
+    "raw_value": 76.2,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 11,
+      "muscleups": 10
+    },
     "position": [
-      -5.623238698141266,
+      -21.0,
       0,
-      -8.177456817669665
+      10.0
     ]
   },
   {
     "id": 47,
-    "label": "Asset 48",
-    "value": 0.5888220930047925,
-    "raw_value": 629.94,
+    "label": "Athlete_47",
+    "value": 0.2090716207377137,
+    "raw_value": 28.8,
+    "category": "Elite",
+    "stats": {
+      "pullups": 12,
+      "muscleups": 12
+    },
     "position": [
-      -0.9494766756450534,
+      -19.5,
       0,
-      -2.255018086000744
+      18.0
     ]
   },
   {
     "id": 48,
-    "label": "Asset 49",
-    "value": 0.5215431938061965,
-    "raw_value": 569.39,
+    "label": "Athlete_48",
+    "value": 0.5414479738275658,
+    "raw_value": 58.7,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 39,
+      "muscleups": 3
+    },
     "position": [
-      18.771577869917756,
+      21.0,
       0,
-      -8.697692764572146
+      -18.0
     ]
   },
   {
     "id": 49,
-    "label": "Asset 50",
-    "value": 0.2575700534602328,
-    "raw_value": 331.81,
+    "label": "Athlete_49",
+    "value": 0.6957843993450821,
+    "raw_value": 72.6,
+    "category": "Elite",
+    "stats": {
+      "pullups": 18,
+      "muscleups": 12
+    },
     "position": [
-      -19.582359671378093,
+      -10.5,
       0,
-      -6.932624334396653
+      18.0
+    ]
+  },
+  {
+    "id": 50,
+    "label": "Athlete_50",
+    "value": 0.22855002179729966,
+    "raw_value": 30.6,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 21,
+      "muscleups": 6
+    },
+    "position": [
+      -6.0,
+      0,
+      -6.0
+    ]
+  },
+  {
+    "id": 51,
+    "label": "Athlete_51",
+    "value": 0.17495492709593619,
+    "raw_value": 25.7,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 40,
+      "muscleups": 10
+    },
+    "position": [
+      22.5,
+      0,
+      10.0
+    ]
+  },
+  {
+    "id": 52,
+    "label": "Athlete_52",
+    "value": 0.9821683433294357,
+    "raw_value": 98.4,
+    "category": "Elite",
+    "stats": {
+      "pullups": 44,
+      "muscleups": 2
+    },
+    "position": [
+      28.5,
+      0,
+      -22.0
+    ]
+  },
+  {
+    "id": 53,
+    "label": "Athlete_53",
+    "value": 0.5166358912710143,
+    "raw_value": 56.5,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 8,
+      "muscleups": 5
+    },
+    "position": [
+      -25.5,
+      0,
+      -10.0
+    ]
+  },
+  {
+    "id": 54,
+    "label": "Athlete_54",
+    "value": 0.260829174830409,
+    "raw_value": 33.5,
+    "category": "Elite",
+    "stats": {
+      "pullups": 6,
+      "muscleups": 11
+    },
+    "position": [
+      -28.5,
+      0,
+      14.0
+    ]
+  },
+  {
+    "id": 55,
+    "label": "Athlete_55",
+    "value": 0.9962536997579243,
+    "raw_value": 99.7,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 10,
+      "muscleups": 1
+    },
+    "position": [
+      -22.5,
+      0,
+      -26.0
+    ]
+  },
+  {
+    "id": 56,
+    "label": "Athlete_56",
+    "value": 0.9654193512887936,
+    "raw_value": 96.9,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 8,
+      "muscleups": 9
+    },
+    "position": [
+      -25.5,
+      0,
+      6.0
+    ]
+  },
+  {
+    "id": 57,
+    "label": "Athlete_57",
+    "value": 0.5582934536070976,
+    "raw_value": 60.2,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 33,
+      "muscleups": 12
+    },
+    "position": [
+      12.0,
+      0,
+      18.0
+    ]
+  },
+  {
+    "id": 58,
+    "label": "Athlete_58",
+    "value": 0.8826363431893397,
+    "raw_value": 89.4,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 22,
+      "muscleups": 13
+    },
+    "position": [
+      -4.5,
+      0,
+      22.0
+    ]
+  },
+  {
+    "id": 59,
+    "label": "Athlete_59",
+    "value": 0.18870710834137938,
+    "raw_value": 27.0,
+    "category": "Elite",
+    "stats": {
+      "pullups": 30,
+      "muscleups": 8
+    },
+    "position": [
+      7.5,
+      0,
+      2.0
+    ]
+  },
+  {
+    "id": 60,
+    "label": "Athlete_60",
+    "value": 0.2788713525921819,
+    "raw_value": 35.1,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 38,
+      "muscleups": 4
+    },
+    "position": [
+      19.5,
+      0,
+      -14.0
+    ]
+  },
+  {
+    "id": 61,
+    "label": "Athlete_61",
+    "value": 0.7003578299727713,
+    "raw_value": 73.0,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 14,
+      "muscleups": 5
+    },
+    "position": [
+      -16.5,
+      0,
+      -10.0
+    ]
+  },
+  {
+    "id": 62,
+    "label": "Athlete_62",
+    "value": 0.8466611422383059,
+    "raw_value": 86.2,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 40,
+      "muscleups": 11
+    },
+    "position": [
+      22.5,
+      0,
+      14.0
+    ]
+  },
+  {
+    "id": 63,
+    "label": "Athlete_63",
+    "value": 0.8563242918780924,
+    "raw_value": 87.1,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 18,
+      "muscleups": 11
+    },
+    "position": [
+      -10.5,
+      0,
+      14.0
+    ]
+  },
+  {
+    "id": 64,
+    "label": "Athlete_64",
+    "value": 0.4045081271221901,
+    "raw_value": 46.4,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 35,
+      "muscleups": 11
+    },
+    "position": [
+      15.0,
+      0,
+      14.0
+    ]
+  },
+  {
+    "id": 65,
+    "label": "Athlete_65",
+    "value": 0.8877700987609599,
+    "raw_value": 89.9,
+    "category": "Elite",
+    "stats": {
+      "pullups": 19,
+      "muscleups": 11
+    },
+    "position": [
+      -9.0,
+      0,
+      14.0
+    ]
+  },
+  {
+    "id": 66,
+    "label": "Athlete_66",
+    "value": 0.8509284487675127,
+    "raw_value": 86.6,
+    "category": "Elite",
+    "stats": {
+      "pullups": 12,
+      "muscleups": 3
+    },
+    "position": [
+      -19.5,
+      0,
+      -18.0
+    ]
+  },
+  {
+    "id": 67,
+    "label": "Athlete_67",
+    "value": 0.9356349942209475,
+    "raw_value": 94.2,
+    "category": "Elite",
+    "stats": {
+      "pullups": 18,
+      "muscleups": 13
+    },
+    "position": [
+      -10.5,
+      0,
+      22.0
+    ]
+  },
+  {
+    "id": 68,
+    "label": "Athlete_68",
+    "value": 0.7853406511139435,
+    "raw_value": 80.7,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 27,
+      "muscleups": 13
+    },
+    "position": [
+      3.0,
+      0,
+      22.0
+    ]
+  },
+  {
+    "id": 69,
+    "label": "Athlete_69",
+    "value": 0.6689882547142286,
+    "raw_value": 70.2,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 44,
+      "muscleups": 10
+    },
+    "position": [
+      28.5,
+      0,
+      10.0
+    ]
+  },
+  {
+    "id": 70,
+    "label": "Athlete_70",
+    "value": 0.5806866214364547,
+    "raw_value": 62.3,
+    "category": "Elite",
+    "stats": {
+      "pullups": 25,
+      "muscleups": 9
+    },
+    "position": [
+      0.0,
+      0,
+      6.0
+    ]
+  },
+  {
+    "id": 71,
+    "label": "Athlete_71",
+    "value": 0.3722827665617431,
+    "raw_value": 43.5,
+    "category": "Elite",
+    "stats": {
+      "pullups": 20,
+      "muscleups": 6
+    },
+    "position": [
+      -7.5,
+      0,
+      -6.0
+    ]
+  },
+  {
+    "id": 72,
+    "label": "Athlete_72",
+    "value": 0.9401334424577784,
+    "raw_value": 94.6,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 22,
+      "muscleups": 11
+    },
+    "position": [
+      -4.5,
+      0,
+      14.0
+    ]
+  },
+  {
+    "id": 73,
+    "label": "Athlete_73",
+    "value": 0.9736638367553172,
+    "raw_value": 97.6,
+    "category": "Elite",
+    "stats": {
+      "pullups": 28,
+      "muscleups": 8
+    },
+    "position": [
+      4.5,
+      0,
+      2.0
+    ]
+  },
+  {
+    "id": 74,
+    "label": "Athlete_74",
+    "value": 0.2839209747374657,
+    "raw_value": 35.6,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 30,
+      "muscleups": 6
+    },
+    "position": [
+      7.5,
+      0,
+      -6.0
+    ]
+  },
+  {
+    "id": 75,
+    "label": "Athlete_75",
+    "value": 0.30536386034439345,
+    "raw_value": 37.5,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 29,
+      "muscleups": 13
+    },
+    "position": [
+      6.0,
+      0,
+      22.0
+    ]
+  },
+  {
+    "id": 76,
+    "label": "Athlete_76",
+    "value": 0.4856137535862266,
+    "raw_value": 53.7,
+    "category": "Elite",
+    "stats": {
+      "pullups": 33,
+      "muscleups": 0
+    },
+    "position": [
+      12.0,
+      0,
+      -30.0
+    ]
+  },
+  {
+    "id": 77,
+    "label": "Athlete_77",
+    "value": 0.44842414298624733,
+    "raw_value": 50.4,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 19,
+      "muscleups": 0
+    },
+    "position": [
+      -9.0,
+      0,
+      -30.0
+    ]
+  },
+  {
+    "id": 78,
+    "label": "Athlete_78",
+    "value": 0.9944574626108207,
+    "raw_value": 99.5,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 5,
+      "muscleups": 8
+    },
+    "position": [
+      -30.0,
+      0,
+      2.0
+    ]
+  },
+  {
+    "id": 79,
+    "label": "Athlete_79",
+    "value": 0.1759252526773454,
+    "raw_value": 25.8,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 29,
+      "muscleups": 10
+    },
+    "position": [
+      6.0,
+      0,
+      10.0
+    ]
+  },
+  {
+    "id": 80,
+    "label": "Athlete_80",
+    "value": 0.018075363615520878,
+    "raw_value": 11.6,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 11,
+      "muscleups": 13
+    },
+    "position": [
+      -21.0,
+      0,
+      22.0
+    ]
+  },
+  {
+    "id": 81,
+    "label": "Athlete_81",
+    "value": 0.4938937151834346,
+    "raw_value": 54.5,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 13,
+      "muscleups": 8
+    },
+    "position": [
+      -18.0,
+      0,
+      2.0
+    ]
+  },
+  {
+    "id": 82,
+    "label": "Athlete_82",
+    "value": 0.17882270922132878,
+    "raw_value": 26.1,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 28,
+      "muscleups": 3
+    },
+    "position": [
+      4.5,
+      0,
+      -18.0
+    ]
+  },
+  {
+    "id": 83,
+    "label": "Athlete_83",
+    "value": 0.3664687845828599,
+    "raw_value": 43.0,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 5,
+      "muscleups": 12
+    },
+    "position": [
+      -30.0,
+      0,
+      18.0
+    ]
+  },
+  {
+    "id": 84,
+    "label": "Athlete_84",
+    "value": 0.7441705230565623,
+    "raw_value": 77.0,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 12,
+      "muscleups": 8
+    },
+    "position": [
+      -19.5,
+      0,
+      2.0
+    ]
+  },
+  {
+    "id": 85,
+    "label": "Athlete_85",
+    "value": 0.7209399242521293,
+    "raw_value": 74.9,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 28,
+      "muscleups": 2
+    },
+    "position": [
+      4.5,
+      0,
+      -22.0
+    ]
+  },
+  {
+    "id": 86,
+    "label": "Athlete_86",
+    "value": 0.30806079185238927,
+    "raw_value": 37.7,
+    "category": "Elite",
+    "stats": {
+      "pullups": 15,
+      "muscleups": 6
+    },
+    "position": [
+      -15.0,
+      0,
+      -6.0
+    ]
+  },
+  {
+    "id": 87,
+    "label": "Athlete_87",
+    "value": 0.5425402305548993,
+    "raw_value": 58.8,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 21,
+      "muscleups": 5
+    },
+    "position": [
+      -6.0,
+      0,
+      -10.0
+    ]
+  },
+  {
+    "id": 88,
+    "label": "Athlete_88",
+    "value": 0.50881407683876,
+    "raw_value": 55.8,
+    "category": "Elite",
+    "stats": {
+      "pullups": 12,
+      "muscleups": 7
+    },
+    "position": [
+      -19.5,
+      0,
+      -2.0
+    ]
+  },
+  {
+    "id": 89,
+    "label": "Athlete_89",
+    "value": 0.6363326181858955,
+    "raw_value": 67.3,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 39,
+      "muscleups": 10
+    },
+    "position": [
+      21.0,
+      0,
+      10.0
+    ]
+  },
+  {
+    "id": 90,
+    "label": "Athlete_90",
+    "value": 0.2504618186055841,
+    "raw_value": 32.5,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 39,
+      "muscleups": 8
+    },
+    "position": [
+      21.0,
+      0,
+      2.0
+    ]
+  },
+  {
+    "id": 91,
+    "label": "Athlete_91",
+    "value": 0.5898708475605439,
+    "raw_value": 63.1,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 37,
+      "muscleups": 13
+    },
+    "position": [
+      18.0,
+      0,
+      22.0
+    ]
+  },
+  {
+    "id": 92,
+    "label": "Athlete_92",
+    "value": 0.978892858275009,
+    "raw_value": 98.1,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 9,
+      "muscleups": 4
+    },
+    "position": [
+      -24.0,
+      0,
+      -14.0
+    ]
+  },
+  {
+    "id": 93,
+    "label": "Athlete_93",
+    "value": 0.48674215295945505,
+    "raw_value": 53.8,
+    "category": "Elite",
+    "stats": {
+      "pullups": 43,
+      "muscleups": 0
+    },
+    "position": [
+      27.0,
+      0,
+      -30.0
+    ]
+  },
+  {
+    "id": 94,
+    "label": "Athlete_94",
+    "value": 0.9060987877185541,
+    "raw_value": 91.5,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 32,
+      "muscleups": 2
+    },
+    "position": [
+      10.5,
+      0,
+      -22.0
+    ]
+  },
+  {
+    "id": 95,
+    "label": "Athlete_95",
+    "value": 0.43439436551042865,
+    "raw_value": 49.1,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 11,
+      "muscleups": 9
+    },
+    "position": [
+      -21.0,
+      0,
+      6.0
+    ]
+  },
+  {
+    "id": 96,
+    "label": "Athlete_96",
+    "value": 0.3500784076946757,
+    "raw_value": 41.5,
+    "category": "Intermediate",
+    "stats": {
+      "pullups": 13,
+      "muscleups": 11
+    },
+    "position": [
+      -18.0,
+      0,
+      14.0
+    ]
+  },
+  {
+    "id": 97,
+    "label": "Athlete_97",
+    "value": 0.6451033620305648,
+    "raw_value": 68.1,
+    "category": "Elite",
+    "stats": {
+      "pullups": 12,
+      "muscleups": 7
+    },
+    "position": [
+      -19.5,
+      0,
+      -2.0
+    ]
+  },
+  {
+    "id": 98,
+    "label": "Athlete_98",
+    "value": 0.6689240596630996,
+    "raw_value": 70.2,
+    "category": "Elite",
+    "stats": {
+      "pullups": 16,
+      "muscleups": 14
+    },
+    "position": [
+      -13.5,
+      0,
+      26.0
+    ]
+  },
+  {
+    "id": 99,
+    "label": "Athlete_99",
+    "value": 0.8641675650719031,
+    "raw_value": 87.8,
+    "category": "Elite",
+    "stats": {
+      "pullups": 38,
+      "muscleups": 10
+    },
+    "position": [
+      19.5,
+      0,
+      10.0
+    ]
+  },
+  {
+    "id": 100,
+    "label": "Athlete_100",
+    "value": 0.23018526824155527,
+    "raw_value": 30.7,
+    "category": "Beginner",
+    "stats": {
+      "pullups": 37,
+      "muscleups": 5
+    },
+    "position": [
+      18.0,
+      0,
+      -10.0
     ]
   }
 ]

@@ -19,12 +19,26 @@ const DataSphere = ({ data }) => {
 
     // Emissive color based on value (dark blue to bright neon cyan/purple)
     // Low value: Blue, High value: Cyan/White
+    // Color mapping based on Category
     const color = useMemo(() => {
         const c = new Color();
-        // HSL: Hue 200 (Blue) to 280 (Purple), Saturation 100%, Lightness variable
-        c.setHSL(0.6 + data.value * 0.2, 1, 0.5);
+        switch (data.category) {
+            case 'Elite':
+                // Gold / Amber
+                c.setHex(0xffaa00);
+                break;
+            case 'Intermediate':
+                // Cyan / Bright Blue
+                c.setHex(0x00ffff);
+                break;
+            case 'Beginner':
+            default:
+                // Teal / Greenish
+                c.setHex(0x00ff88);
+                break;
+        }
         return c;
-    }, [data.value]);
+    }, [data.category]);
 
     // Current position state for the Line to track
     const [currentPos, setCurrentPos] = useState(initialPosition.clone());
