@@ -3,7 +3,7 @@ import { useFrame, useThree } from '@react-three/fiber';
 import { Vector3, Color } from 'three';
 import { Line } from '@react-three/drei';
 
-const DataSphere = ({ data }) => {
+const DataSphere = ({ data, onHover, isHighlighted }) => {
     const meshRef = useRef();
     const [hovered, setHovered] = useState(false);
     const { mouse, viewport } = useThree();
@@ -46,9 +46,9 @@ const DataSphere = ({ data }) => {
     useFrame((state) => {
         if (!meshRef.current) return;
 
-        // 1. Floating Animation (Sine Wave)
+        // 1. Floating Animation (Sine Wave) - Smoother
         const time = state.clock.getElapsedTime();
-        const floatY = Math.sin(time * 2 + randomPhase) * 0.5;
+        const floatY = Math.sin(time * 0.5 + randomPhase) * 0.2; // Slower and subtler
         const basePosition = new Vector3(initialPosition.x, targetY + floatY, initialPosition.z);
 
         // 2. Magnet Interaction
@@ -64,7 +64,10 @@ const DataSphere = ({ data }) => {
         let targetPos = basePosition.clone();
         let targetScale = 1;
 
-        if (dist < magnetRadius) {
+        // Magnet Logic OR Highlight Logic
+        if (isHighlighted) {
+            targetScale = 2.5; // Make it BIG when searched
+        } else if (dist < magnetRadius) {
             // Attraction
             const attractionStrength = (1 - dist / magnetRadius); // 0 to 1
             // Move towards the CLOSEST POINT on the ray
@@ -75,9 +78,9 @@ const DataSphere = ({ data }) => {
             targetScale = 1 + attractionStrength * 0.8; // Scale up more
         }
 
-        // Lerp current position to target
-        meshRef.current.position.lerp(targetPos, 0.1);
-        meshRef.current.scale.lerp(new Vector3(targetScale, targetScale, targetScale), 0.1);
+        // Lerp current position to target (Smoother)
+        meshRef.current.position.lerp(targetPos, 0.05);
+        meshRef.current.scale.lerp(new Vector3(targetScale, targetScale, targetScale), 0.05);
 
         // Update state for the Line component
         setCurrentPos(meshRef.current.position.clone());
@@ -91,14 +94,15 @@ const DataSphere = ({ data }) => {
             <mesh
                 ref={meshRef}
                 position={initialPosition}
-                onPointerOver={() => setHovered(true)}
-                onPointerOut={() => setHovered(false)}
+                onPointerOver={() => { setHovered(true); if (onHover) onHover(data); }}
+                onPointerOut={() => { setHovered(false); if (onHover) onHover(null); }}
             >
-                <sphereGeometry args={[0.4, 32, 32]} />
+                {/* Optimized Geometry: 16x16 segments instead of 32x32 */}
+                <sphereGeometry args={[0.4, 16, 16]} />
                 <meshStandardMaterial
                     color={color}
                     emissive={color}
-                    emissiveIntensity={data.value * 2 + (hovered ? 2 : 0)}
+                    emissiveIntensity={isHighlighted ? 10 : (data.value * 2 + (hovered ? 2 : 0))}
                     transparent
                     opacity={0.9}
                     roughness={0.1}

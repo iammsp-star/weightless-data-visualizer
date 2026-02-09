@@ -5,7 +5,7 @@ import os
 
 # Configuration
 OUTPUT_FILE = 'public/data.json'
-COUNT = 100
+COUNT = 50
 
 def generate_data():
     """Generates athlete data based on user specifications."""

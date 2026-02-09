@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Environment, Grid } from '@react-three/drei';
+// Removed PostProcessing for performance on i3 laptop
 import DataSphere from './DataSphere';
 
-const Scene = ({ dataPoints = [] }) => {
+const Scene = ({ dataPoints = [], onHover, highlightedId }) => {
 
     return (
         <div style={{ width: '100vw', height: '100vh', background: '#111' }}>
-            <Canvas camera={{ position: [0, 5, 20], fov: 60 }}>
+            {/* Reduce DPI for performance */}
+            <Canvas dpr={[1, 1.5]} camera={{ position: [0, 5, 20], fov: 60 }}>
                 {/* Environment */}
                 <color attach="background" args={['#0a0a0a']} />
                 <fog attach="fog" args={['#0a0a0a', 10, 40]} />
@@ -28,7 +30,12 @@ const Scene = ({ dataPoints = [] }) => {
 
                 {/* Data Spheres */}
                 {dataPoints.map((data) => (
-                    <DataSphere key={data.id} data={data} />
+                    <DataSphere
+                        key={data.id}
+                        data={data}
+                        onHover={onHover}
+                        isHighlighted={highlightedId === data.id}
+                    />
                 ))}
 
                 {/* Controls */}
@@ -38,9 +45,6 @@ const Scene = ({ dataPoints = [] }) => {
                     minDistance={5}
                     maxDistance={30}
                 />
-
-                {/* Post Processing or Environment if needed */}
-                {/* <Environment preset="city" /> */}
             </Canvas>
         </div>
     );
