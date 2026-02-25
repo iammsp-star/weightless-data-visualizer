@@ -33,6 +33,20 @@ function App() {
     setSearchTerm(weakest.label);
   };
 
+  const findStrongestInCategory = (category) => {
+    const filtered = dataPoints.filter(d => d.category === category);
+    if (filtered.length === 0) return;
+    const strongest = filtered.reduce((max, obj) => obj.raw_value > max.raw_value ? obj : max, filtered[0]);
+    setSearchTerm(strongest.label);
+  };
+
+  const findWeakestInCategory = (category) => {
+    const filtered = dataPoints.filter(d => d.category === category);
+    if (filtered.length === 0) return;
+    const weakest = filtered.reduce((min, obj) => obj.raw_value < min.raw_value ? obj : min, filtered[0]);
+    setSearchTerm(weakest.label);
+  };
+
   useEffect(() => {
     if (highlightedData) {
       setHoveredData(highlightedData);
@@ -135,22 +149,36 @@ function App() {
           left: '50%',
           transform: 'translateX(-50%)',
           display: 'flex',
-          gap: '20px',
+          gap: '30px',
           padding: '10px 20px',
           animationDelay: '0.7s'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffaa00', boxShadow: '0 0 8px #ffaa00' }}></div>
-            <span style={{ fontSize: '0.8rem', color: '#ddd' }}>Elite</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00ffff', boxShadow: '0 0 8px #00ffff' }}></div>
-            <span style={{ fontSize: '0.8rem', color: '#ddd' }}>Intermediate</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00ff88', boxShadow: '0 0 8px #00ff88' }}></div>
-            <span style={{ fontSize: '0.8rem', color: '#ddd' }}>Beginner</span>
-          </div>
+          {['Elite', 'Intermediate', 'Beginner'].map(cat => (
+            <div key={cat} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: getCatColor(cat), boxShadow: `0 0 8px ${getCatColor(cat)}` }}></div>
+              <span style={{ fontSize: '0.8rem', color: '#ddd', marginRight: '6px' }}>{cat}</span>
+              <div style={{ display: 'flex', gap: '2px' }}>
+                <button
+                  onClick={() => findStrongestInCategory(cat)}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: '0.9rem', opacity: 0.5, transition: 'all 0.2s', filter: 'grayscale(0.8)' }}
+                  onMouseEnter={e => { e.currentTarget.style.opacity = 1; e.currentTarget.style.filter = 'grayscale(0)'; e.currentTarget.style.transform = 'scale(1.2)' }}
+                  onMouseLeave={e => { e.currentTarget.style.opacity = 0.5; e.currentTarget.style.filter = 'grayscale(0.8)'; e.currentTarget.style.transform = 'scale(1)' }}
+                  title={`Strongest ${cat}`}
+                >
+                  💪
+                </button>
+                <button
+                  onClick={() => findWeakestInCategory(cat)}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: '0 2px', fontSize: '0.9rem', opacity: 0.5, transition: 'all 0.2s', filter: 'grayscale(0.8)' }}
+                  onMouseEnter={e => { e.currentTarget.style.opacity = 1; e.currentTarget.style.filter = 'grayscale(0)'; e.currentTarget.style.transform = 'scale(1.2)' }}
+                  onMouseLeave={e => { e.currentTarget.style.opacity = 0.5; e.currentTarget.style.filter = 'grayscale(0.8)'; e.currentTarget.style.transform = 'scale(1)' }}
+                  title={`Weakest ${cat}`}
+                >
+                  📉
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* --- HUD DATA CARD (Floating Tooltip) --- */}
