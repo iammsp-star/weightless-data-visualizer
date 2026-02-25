@@ -1,7 +1,7 @@
 import React, { useRef, useMemo, useState } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { Vector3, Color } from 'three';
-import { Line } from '@react-three/drei';
+// import { Line } from '@react-three/drei';
 
 const DataSphere = ({ data, onHover, isHighlighted }) => {
     const meshRef = useRef();
@@ -40,8 +40,11 @@ const DataSphere = ({ data, onHover, isHighlighted }) => {
         return c;
     }, [data.category]);
 
-    // Current position state for the Line to track
-    const [currentPos, setCurrentPos] = useState(initialPosition.clone());
+    // Anchor point on the floor
+    const floorPos = useMemo(() => new Vector3(initialPosition.x, 0, initialPosition.z), [initialPosition]);
+    
+    // Ref for the native line geometry to update directly
+    const lineGeoRef = useRef();
 
     useFrame((state) => {
         if (!meshRef.current) return;
@@ -82,12 +85,15 @@ const DataSphere = ({ data, onHover, isHighlighted }) => {
         meshRef.current.position.lerp(targetPos, 0.05);
         meshRef.current.scale.lerp(new Vector3(targetScale, targetScale, targetScale), 0.05);
 
-        // Update state for the Line component
-        setCurrentPos(meshRef.current.position.clone());
+        // Update the line geometry directly to avoid React re-renders
+        if (lineGeoRef.current) {
+            const positions = lineGeoRef.current.attributes.position.array;
+            positions[3] = meshRef.current.position.x;
+            positions[4] = meshRef.current.position.y;
+            positions[5] = meshRef.current.position.z;
+            lineGeoRef.current.attributes.position.needsUpdate = true;
+        }
     });
-
-    // Anchor point on the floor
-    const floorPos = useMemo(() => new Vector3(initialPosition.x, 0, initialPosition.z), [initialPosition]);
 
     return (
         <>
@@ -110,14 +116,18 @@ const DataSphere = ({ data, onHover, isHighlighted }) => {
                 />
             </mesh>
 
-            {/* Tether Line */}
-            <Line
-                points={[floorPos, currentPos]}
-                color="white"
-                transparent
-                opacity={0.15}
-                lineWidth={1}
-            />
+            {/* Tether Line (Native three.js to avoid re-renders) */}
+            <line>
+                <bufferGeometry ref={lineGeoRef}>
+                    <bufferAttribute
+                        attach="attributes-position"
+                        count={2}
+                        array={new Float32Array([floorPos.x, floorPos.y, floorPos.z, initialPosition.x, initialPosition.y, initialPosition.z])}
+                        itemSize={3}
+                    />
+                </bufferGeometry>
+                <lineBasicMaterial color="white" transparent opacity={0.15} />
+            </line>
         </>
     );
 };

@@ -7,7 +7,6 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    // Correctly fetch data taking the base URL into account
     const baseUrl = import.meta.env.BASE_URL;
     const url = `${baseUrl}data.json`;
 
@@ -17,18 +16,35 @@ function App() {
       .catch(err => console.error("Failed to load data:", err));
   }, []);
 
-  // Search Logic
   const highlightedData = React.useMemo(() => {
     if (!searchTerm) return null;
     return dataPoints.find(d => d.label.toLowerCase().includes(searchTerm.toLowerCase()));
   }, [searchTerm, dataPoints]);
 
-  // Auto-select (hover) the searched item
+  const findStrongest = () => {
+    if (dataPoints.length === 0) return;
+    const strongest = dataPoints.reduce((max, obj) => obj.raw_value > max.raw_value ? obj : max, dataPoints[0]);
+    setSearchTerm(strongest.label);
+  };
+
+  const findWeakest = () => {
+    if (dataPoints.length === 0) return;
+    const weakest = dataPoints.reduce((min, obj) => obj.raw_value < min.raw_value ? obj : min, dataPoints[0]);
+    setSearchTerm(weakest.label);
+  };
+
   useEffect(() => {
     if (highlightedData) {
       setHoveredData(highlightedData);
     }
   }, [highlightedData]);
+
+  // CATEGORY COLORS
+  const getCatColor = (cat) => {
+    if (cat === 'Elite') return '#ffaa00';
+    if (cat === 'Intermediate') return '#00ffff';
+    return '#00ff88';
+  };
 
   return (
     <>
@@ -40,89 +56,150 @@ function App() {
         height: '100%',
         pointerEvents: 'none',
         zIndex: 10,
-        padding: '40px',
+        padding: '2rem',
         boxSizing: 'border-box',
         color: 'white',
-        fontFamily: 'Inter, sans-serif'
+        fontFamily: "'Inter', sans-serif"
       }}>
-        {/* Header */}
-        <h1 style={{ margin: 0, fontSize: '4rem', fontWeight: 800, letterSpacing: '-0.05em', color: '#eee' }}>
-          WEIGHTLESS DATA
-        </h1>
-        <p style={{ margin: 0, fontSize: '1rem', color: '#888', letterSpacing: '0.1em' }}>
-          INTERACTIVE 3D VISUALIZATION
-        </p>
 
-        {/* Search Input */}
-        <div style={{ marginTop: '20px', pointerEvents: 'auto' }}>
-          <input
-            type="text"
-            placeholder="Search Athlete..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            style={{
-              padding: '10px 15px',
-              fontSize: '1rem',
-              borderRadius: '5px',
-              border: '1px solid #444',
-              background: 'rgba(0, 0, 0, 0.8)',
-              color: 'white',
-              outline: 'none',
-              width: '250px'
-            }}
-          />
-        </div>
-
-        {/* Counter */}
-        <div style={{ position: 'absolute', top: '40px', right: '40px', textAlign: 'right' }}>
-          <div style={{ fontSize: '3rem', fontWeight: 700 }}>
-            {dataPoints.length.toString().padStart(3, '0')}
-          </div>
-          <div style={{ fontSize: '0.8rem', color: '#666' }}>ACTIVE NODES</div>
-        </div>
-
-        {/* Stats / Legend */}
-        <div style={{ position: 'absolute', bottom: '40px', left: '40px', maxWidth: '300px' }}>
-          <p style={{ color: '#666', lineHeight: '1.5', fontSize: '0.9rem' }}>
-            Hover over nodes to inspect values. Data points are distributed in a localized cluster.
-            Height represents relative value magnitude.
-            <br /><br />
-            <span style={{ color: '#ffaa00' }}>● Elite</span> <span style={{ color: '#00ffff' }}>● Intermediate</span> <span style={{ color: '#00ff88' }}>● Beginner</span>
+        {/* --- HEADER --- */}
+        <div className="fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1 style={{ margin: 0, fontSize: '3.5rem', fontWeight: 800, letterSpacing: '-0.02em', background: 'linear-gradient(to right, #fff, #888)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+            WEIGHTLESS
+          </h1>
+          <p style={{ margin: '0 0 0 4px', fontSize: '0.9rem', color: '#666', letterSpacing: '0.2em', textTransform: 'uppercase' }}>
+            Data Visualization
           </p>
         </div>
 
-        {/* Tooltip */}
+        {/* --- SEARCH BAR AND CONTROLS --- */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'flex-start' }}>
+          <div className="glass-panel fade-in" style={{
+            marginTop: '2rem',
+            pointerEvents: 'auto',
+            display: 'inline-flex',
+            alignItems: 'center',
+            padding: '8px 16px',
+            animationDelay: '0.3s'
+          }}>
+            <span style={{ fontSize: '1.2rem', paddingRight: '10px' }}>🔍</span>
+            <input
+              type="text"
+              placeholder="Search Athlete..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              style={{
+                background: 'transparent',
+                border: 'none',
+                color: 'white',
+                fontSize: '1rem',
+                outline: 'none',
+                minWidth: '200px',
+                fontFamily: 'inherit'
+              }}
+            />
+          </div>
+
+          <div className="fade-in" style={{
+            pointerEvents: 'auto',
+            display: 'flex',
+            gap: '10px',
+            animationDelay: '0.4s'
+          }}>
+            <button className="glass-btn pulse-glow-amber" onClick={findStrongest}>💪 Strongest</button>
+            <button className="glass-btn pulse-glow-red" onClick={findWeakest}>📉 Weakest</button>
+          </div>
+        </div>
+
+        {/* --- COUNTER WIDGET --- */}
+        <div className="glass-panel fade-in" style={{
+          position: 'absolute',
+          top: '40px',
+          right: '40px',
+          padding: '15px 25px',
+          textAlign: 'right',
+          animationDelay: '0.5s'
+        }}>
+          <div style={{ fontSize: '2.5rem', fontWeight: 700, lineHeight: 1 }}>
+            {dataPoints.length.toString().padStart(3, '0')}
+          </div>
+          <div style={{ fontSize: '0.7rem', color: '#888', letterSpacing: '0.1em', marginTop: '5px' }}>
+            ACTIVE NODES
+          </div>
+        </div>
+
+        {/* --- LEGEND (Bottom Center) --- */}
+        <div className="glass-panel fade-in" style={{
+          position: 'absolute',
+          bottom: '40px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          display: 'flex',
+          gap: '20px',
+          padding: '10px 20px',
+          animationDelay: '0.7s'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffaa00', boxShadow: '0 0 8px #ffaa00' }}></div>
+            <span style={{ fontSize: '0.8rem', color: '#ddd' }}>Elite</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00ffff', boxShadow: '0 0 8px #00ffff' }}></div>
+            <span style={{ fontSize: '0.8rem', color: '#ddd' }}>Intermediate</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00ff88', boxShadow: '0 0 8px #00ff88' }}></div>
+            <span style={{ fontSize: '0.8rem', color: '#ddd' }}>Beginner</span>
+          </div>
+        </div>
+
+        {/* --- HUD DATA CARD (Floating Tooltip) --- */}
         {hoveredData && (
-          <div style={{
+          <div className="glass-panel fade-in" style={{
             position: 'absolute',
             bottom: '40px',
             right: '40px',
-            background: 'rgba(0,0,0,0.8)',
-            border: `1px solid ${hoveredData.category === 'Elite' ? '#ffaa00' : hoveredData.category === 'Intermediate' ? '#00ffff' : '#00ff88'}`,
-            padding: '20px',
-            borderRadius: '4px',
-            backdropFilter: 'blur(4px)',
-            minWidth: '200px'
+            padding: '0', // Paddington moved to inner
+            width: '280px',
+            overflow: 'hidden',
+            borderLeft: `4px solid ${getCatColor(hoveredData.category)}`
           }}>
-            <h3 style={{ margin: '0 0 10px 0', fontSize: '1.2rem', color: '#fff' }}>{hoveredData.label}</h3>
-            <div style={{ fontSize: '0.9rem', color: '#ccc', lineHeight: '1.6' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span>Category:</span>
-                <span style={{ color: hoveredData.category === 'Elite' ? '#ffaa00' : hoveredData.category === 'Intermediate' ? '#00ffff' : '#00ff88' }}>
-                  {hoveredData.category}
-                </span>
+            {/* Header Area */}
+            <div style={{ padding: '20px', background: 'rgba(255,255,255,0.03)' }}>
+              <h3 style={{ margin: 0, fontSize: '1.4rem', fontWeight: 600, color: '#fff' }}>
+                {hoveredData.label}
+              </h3>
+              <span style={{
+                display: 'inline-block',
+                marginTop: '6px',
+                fontSize: '0.75rem',
+                padding: '4px 8px',
+                borderRadius: '4px',
+                background: `${getCatColor(hoveredData.category)}22`,
+                color: getCatColor(hoveredData.category),
+                fontWeight: 500,
+                letterSpacing: '0.05em'
+              }}>
+                {hoveredData.category.toUpperCase()}
+              </span>
+            </div>
+
+            {/* Stats Grid */}
+            <div style={{ padding: '20px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px' }}>
+              <div>
+                <div style={{ fontSize: '0.7rem', color: '#888', textTransform: 'uppercase' }}>Strength</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff' }}>{hoveredData.raw_value}</div>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span>Strength Score:</span>
-                <span style={{ fontWeight: 'bold', color: 'white' }}>{hoveredData.raw_value}</span>
+              <div>
+                {/* Spacer */}
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span>Pull-ups:</span>
-                <span>{hoveredData.stats.pullups}</span>
+              <div>
+                <div style={{ fontSize: '0.7rem', color: '#888', textTransform: 'uppercase' }}>Pull-ups</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff' }}>{hoveredData.stats.pullups}</div>
               </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <span>Muscle-ups:</span>
-                <span>{hoveredData.stats.muscleups}</span>
+              <div>
+                <div style={{ fontSize: '0.7rem', color: '#888', textTransform: 'uppercase' }}>Muscle-ups</div>
+                <div style={{ fontSize: '1.2rem', fontWeight: 700, color: '#fff' }}>{hoveredData.stats.muscleups}</div>
               </div>
             </div>
           </div>
