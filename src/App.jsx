@@ -151,7 +151,8 @@ function App() {
           display: 'flex',
           gap: '30px',
           padding: '10px 20px',
-          animationDelay: '0.7s'
+          animationDelay: '0.7s',
+          pointerEvents: 'auto'
         }}>
           {['Elite', 'Intermediate', 'Beginner'].map(cat => (
             <div key={cat} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
